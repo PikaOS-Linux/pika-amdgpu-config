@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+INTERNET="no"
+
+internet_check() {
+      # Check for internet connection
+      wget -q --spider http://google.com
+      if [ $? -eq 0 ]; then
+          export INTERNET="yes"
+      fi
+}
+
+internet_check
+
+if [[ $INTERNET == yes ]]; then
+	python3 /usr/lib/pika/amdgpu-config/main.py
+else
+	zenity --error --title='Failed!' --text='No Internet Connection!'
+fi
