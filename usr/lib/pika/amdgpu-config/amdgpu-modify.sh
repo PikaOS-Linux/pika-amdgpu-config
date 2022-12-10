@@ -27,7 +27,7 @@ if [[ "$AMDGPU_DETECTED" == TRUE ]]; then
 	
 	# Get EULA
 	
-	wget https://raw.githubusercontent.com/PikaOS-Linux/pika-amdgpu-config/main/RADEON-LICENSE.md -O /tmp/zenity/pika-amdgpu-config/EULA
+	wget https://raw.githubusercontent.com/PikaOS-Linux/pika-amdgpu-config/master/RADEON-LICENSE.md -O /tmp/zenity/pika-amdgpu-config/EULA
 
 	if zenity --text-info --title="Radeon™ Software for Linux End User License Agreement" --filename=/tmp/zenity/pika-amdgpu-config/EULA  --checkbox="I read and accept the terms." 
 	then
