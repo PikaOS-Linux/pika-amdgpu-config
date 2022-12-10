@@ -10,10 +10,10 @@ run_func() {
 	
 	# Check for current packages
 
-	dpkg-query -l  amf-amdgpu-pro && export "AMF_STATE"=TRUE || export "AMF_STATE"=FALSE
-	dpkg-query -l  vulkan-amdgpu-pro && export "VLKPRO_STATE"=TRUE || export "VLKPRO_STATE"=FALSE
-	dpkg-query -l  amdvlk && export "VLKOPEN_STATE"=TRUE || export "VLKOPEN_STATE"=FALSE
-	dpkg-query -l  opencl-legacy-amdgpu-pro-icd && export "OCL_STATE"=TRUE || export "OCL_STATE"=FALSE
+	dpkg -l  amf-amdgpu-pro && export "AMF_STATE"=TRUE || export "AMF_STATE"=FALSE
+	dpkg -l  vulkan-amdgpu-pro && export "VLKPRO_STATE"=TRUE || export "VLKPRO_STATE"=FALSE
+	dpkg -l  amdvlk && export "VLKOPEN_STATE"=TRUE || export "VLKOPEN_STATE"=FALSE
+	dpkg -l  opencl-legacy-amdgpu-pro-icd && export "OCL_STATE"=TRUE || export "OCL_STATE"=FALSE
 	
 		if [[ "$AMF_STATE" == TRUE ]]; then
 		export ENT1_0=$AMF_STATE
