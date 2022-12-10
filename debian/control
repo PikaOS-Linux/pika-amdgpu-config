@@ -16,6 +16,6 @@ Depends: python3 (>= 3.3),
          packagekit,
          packagekit-tools,
          zenity,
-         libgtk3-perl
+         libgtk3-perl,
          ${misc:Depends},
 Description: PikaOS AMDGPU-PRO Installer
